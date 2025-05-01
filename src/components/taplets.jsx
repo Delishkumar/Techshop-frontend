@@ -29,7 +29,7 @@ const laptops = [
     price: 55000,
     rating: 4.5,
     image: TS1,
-    details:"Display| 4 GB RAM, 64 GB ROM Expandable"
+    details:"Display HD| 4 GB RAM, 64 GB ROM "
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const laptops = [
     price: 48000,
     rating: 4.0,
     image: TL1,
-    details:"mini, 4 GB RAM, 64 GB ROM Dual speaker"
+    details:"mini, 4 GB RAM, 64 GB ROM FHD"
   },
   {
     id: 4,
@@ -56,7 +56,7 @@ const laptops = [
     price: 51000,
     rating: 4.3,
     image: TAS4,
-    details:" 11 inch Display 8 GB RAM, 256 GB ROM "
+    details:" 11 inch Display 8 GB RAM 64GB, "
   },
   {
     id: 5,

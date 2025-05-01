@@ -39,7 +39,7 @@ const laptops = [
     price: 17000,
     rating: 4.2,
     image: ML1,
-     details:"20 Inch HD LED Monitor | Refresh Rate 60 Hz," 
+     details:"20 Inch HD LED Monitor | Refresh Rate " 
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const laptops = [
     price: 4800,
     rating: 4.0,
     image: MA1,
-    details:"22 Inch HD LED Monitor | Refresh Rate 60 Hz"
+    details:"22 Inch HD LED Monitor | Refresh Rate"
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ const laptops = [
     price: 5050,
     rating: 4.3,
     image: MD1,
-    details:" Refresh Rate 60 Hz, 1680 X 1050 Pixels"
+    details:" Refresh Rate 60 Hz, 1680 X 1050 Disk"
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ const laptops = [
      price: 4300,
     rating: 4.0,
     image: MA2,
-       details:"22 Inch HD LED Monitor | Refresh Rate 60 Hz"
+       details:"22 Inch HD LED Monitor | Refresh Rate"
   },
   {
     id: 6,
@@ -75,7 +75,7 @@ const laptops = [
     price: 5100,
     rating: 4.3,
     image: MD2,
-       details:"34 Inch HD LED Monitor | Refresh Rate 60 Hz"
+       details:"34 Inch HD LED Monitor | Refresh Rate "
   } 
   ,
   {
@@ -85,7 +85,7 @@ const laptops = [
     price: 5000,
     rating: 4.5,
     image: MS2,
-       details:"22 Inch HD LED Monitor | Refresh Rate 60 Hz"
+       details:"22 Inch HD LED Monitor | Refresh Rate "
   },
   {
     id: 8,
@@ -94,7 +94,7 @@ const laptops = [
     price: 12000,
     rating: 4.2,
     image: ML2,
-       details:" HD LED Monitor | Refresh Rate 60 Hz"
+       details:" HD LED Monitor | Refresh Rate 60hz"
   },
 ,
   {

@@ -38,7 +38,7 @@ const headphones = [
     price: 32499,
     rating: 4.7,
     image: HO1,
-    details:"60HRS Battery,IPX6, v.6.2 Bluetooth TWS buds,",
+    details:"60HRS Battery,IPX6, v.6.2 Bluetooth ",
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const headphones = [
     price: 5999,
     rating: 4.2,
     image: HJ1,
-    details:"TWS Buds 110HRS Battery,IPz4, v.4.2 Bluetooth",
+    details:"TWS Buds 110HRS Battery,IPz4, v.4.2 ",
   },
   {
     id: 4,
@@ -119,7 +119,7 @@ const headphones = [
     price: 15999,
     rating: 4.2,
     image: HJ3,
-    details:"IPX4, v.5.2 Bluetooth",
+    details:"IPX4, v.5.2 Bluetooth Display",
   },
   {
     id: 13,
@@ -155,7 +155,7 @@ const headphones = [
     price: 12599,
     rating: 4.8,
     image: HS4,
-    details:" TWS Ear Buds,60HRS Battery,IPX4, v.5.2 Bluetooth",
+    details:" TWS Ear Buds,60HRS Battery,IPX4",
   },
   {
     id: 17,
@@ -164,7 +164,7 @@ const headphones = [
     price: 16499,
     rating: 4.7,
     image: HO4,
-    details:"80HRS Battery,IPX4, v.5.2 Bluetooth ,TWS Ear Buds",
+    details:"80HRS Battery,IPX4, v.5.2 Bluetooth",
   },
 ];
 

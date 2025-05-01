@@ -29,7 +29,7 @@ const smartwatches = [
     price: 41900,
     rating: 4.9,
     image: WA1,
-    details:"Fitness & Sleep Tracker, Crash Detection"
+    details:"Fitness & Sleep Tracker, Crash dete"
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const smartwatches = [
     price: 2999,
     rating: 4.2,
     image: WN1,
-     details:"[GPS 44mm] Smartwatch with Midnight Aluminum"
+     details:"[GPS 44mm] Smartwatch with Midnight "
   },
   {
     id: 4,
@@ -56,7 +56,7 @@ const smartwatches = [
     price: 1999,
     rating: 4.1,
     image: WB3,
-  details:"Bluetooth Calling Smart Watch, 10 Days Battery"
+  details:"Bluetooth Calling Smart Watch, 10 Days"
 
   },
   {
@@ -66,7 +66,7 @@ const smartwatches = [
     price: 2599,
     rating: 4.2,
     image: WN2,
-     details:"Fitness & Sleep Tracker, Crash Detection"
+     details:"Fitness & Sleep Tracker, Crash "
   },
   {
     id: 6,
@@ -75,7 +75,7 @@ const smartwatches = [
     price: 2999,
     rating: 4.1,
     image: WB2,
-     details:"Bluetooth Calling Smart Watch, 10 Days Battery"
+     details:"Bluetooth Calling Smart Watch, "
   },
   {
     id: 7,
@@ -84,7 +84,7 @@ const smartwatches = [
     price: 41800,
     rating: 4.9,
     image: WA2,
-     details:" FHD Fitness & Sleep Tracker, Crash Detection"
+     details:" FHD Fitness & Sleep Tracker, "
   },
   {
     id: 8,
@@ -93,7 +93,7 @@ const smartwatches = [
     price: 21999,
     rating: 4.6,
     image: WS2,
-     details:"Fitness & Sleep Tracker, Crash Detection"
+     details:"Fitness & Sleep Tracker, Crash "
   },
   {
     id: 9,

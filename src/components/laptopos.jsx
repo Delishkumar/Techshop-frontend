@@ -29,6 +29,7 @@ const laptops = [
     price: 55000,
     rating: 4.5,
     image: LD1,
+    details:"8GB 1TB FHD Display"
   },
   {
     id: 2,
@@ -37,6 +38,7 @@ const laptops = [
     price: 62000,
     rating: 4.2,
     image: LH1,
+    details:"4GB 2TB FHD Display"
   },
   {
     id: 3,
@@ -45,6 +47,7 @@ const laptops = [
     price: 48000,
     rating: 4.0,
     image: LL1,
+    details:"6GB 1TB FHD Display"
   },
   {
     id: 4,
@@ -53,6 +56,7 @@ const laptops = [
     price: 51000,
     rating: 4.3,
     image: LA1,
+    details:"12GB 5TB FHD Display"
   },
   {
     id: 5,
@@ -61,6 +65,7 @@ const laptops = [
      price: 43000,
     rating: 4.0,
     image: LL2,
+    details:"4GB 2TB FHD Display"
   },
   {
     id: 6,
@@ -69,6 +74,7 @@ const laptops = [
     price: 51000,
     rating: 4.3,
     image: LA2,
+    details:"4GB 2TB FHD Display"
   } 
   ,
   {
@@ -78,6 +84,7 @@ const laptops = [
     price: 65000,
     rating: 4.5,
     image: LD2,
+    details:"4GB 2TB FHD Display"
   },
   {
     id: 8,
@@ -86,6 +93,7 @@ const laptops = [
     price: 52000,
     rating: 4.2,
     image: LH2,
+    details:"4GB 2TB FHD Display"
   },
 ,
   {
@@ -95,6 +103,7 @@ const laptops = [
     price: 68000,
     rating: 4.5,
     image: LD3,
+    details:"4GB 2TB FHD Display"
   },
   {
     id: 10,
@@ -103,6 +112,7 @@ const laptops = [
     price: 32000,
     rating: 4.2,
     image: LH3,
+    details:"4GB 2TB FHD Display"
   },
   {
     id: 11,
@@ -111,6 +121,7 @@ const laptops = [
     price: 63000,
     rating: 4.3,
     image: LL3,
+    details:"4GB 2TB FHD Display"
   },
   {
     id: 12,
@@ -119,6 +130,7 @@ const laptops = [
     price: 39000,
     rating: 4.3,
     image: LA3,
+    details:"4GB 2TB FHD Display"
   },
   {
     id: 13,
@@ -127,6 +139,7 @@ const laptops = [
     price: 45000,
     rating: 4.5,
     image: LD4,
+    details:"4GB 2TB FHD Display"
   },
   {
     id: 14,
@@ -135,6 +148,7 @@ const laptops = [
     price: 62000,
     rating: 4.2,
     image: LH4,
+    details:"4GB 2TB FHD Display"
   },
   {
     id: 15,
@@ -143,6 +157,7 @@ const laptops = [
     price: 53000,
     rating: 4.0,
     image: LL4,
+    details:"4GB 2TB FHD Display"
   },
   {
     id: 16,
@@ -151,6 +166,7 @@ const laptops = [
     price: 61000,
     rating: 4.3,
     image: LA4,
+    details:"4GB 2TB FHD Display"
   },
 ];
 
