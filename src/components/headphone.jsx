@@ -33,7 +33,7 @@ const headphones = [
   },
   {
     id: 2,
-    name: 'Oneplus QuietComfort 45',
+    name: 'Oneplus QuietComfort',
     brand: 'Oneplus',
     price: 32499,
     rating: 4.7,

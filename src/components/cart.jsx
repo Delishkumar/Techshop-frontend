@@ -28,7 +28,7 @@ const Card = () => {
 
       auth.onAuthStateChanged(function(user){
         if(user){
-    navigate("/")
+    navigate("/cart")
         }
         else{
             navigate("/login")

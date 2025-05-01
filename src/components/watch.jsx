@@ -33,7 +33,7 @@ const smartwatches = [
   },
   {
     id: 2,
-    name: 'Samsung Galaxy Watch 6',
+    name: 'Samsung Galaxy Watch',
     brand: 'Samsung',
     price: 31999,
     rating: 4.6,
@@ -51,12 +51,12 @@ const smartwatches = [
   },
   {
     id: 4,
-    name: 'boAt Xtend Smartwatch',
+    name: 'boAt Xm Smartwatch',
     brand: 'boAt',
     price: 1999,
     rating: 4.1,
     image: WB3,
-  details:"Bluetooth Calling Smart Watch, 10 Days"
+  details:"Bluetooth Calling Smart Watch"
 
   },
   {
