@@ -1,12 +1,14 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { Link,useNavigate } from "react-router-dom";
+import Navbar from "./navbar";
+import { auth } from "./firebase";
 import axios from "axios";
 import { Trash2 } from "lucide-react";
 import { useState,useEffect } from "react";
 const Card = () => {
 
+  const navigate = useNavigate();
     const [cartItems, setCartItems] = useState([]);
 
     const fetchCart = async () => {
@@ -21,9 +23,24 @@ const Card = () => {
     };
   
     useEffect(() => {
+
+
+
+      auth.onAuthStateChanged(function(user){
+        if(user){
+    navigate("/")
+        }
+        else{
+            navigate("/login")
+        }
+      })
+
       fetchCart();
       const interval = setInterval(fetchCart, 10000);
       return () => clearInterval(interval);
+
+  
+
     }, []);
 
 
@@ -35,7 +52,7 @@ const Card = () => {
 
   return (
     <section>
-  
+  <Navbar/>
        
     <div className="p-4 bg-white shadow-xl rounded-2xl  h-screen mx-auto my-4">
       <h2 className="text-xl font-bold mb-4 text-center">🛒 Cart</h2>

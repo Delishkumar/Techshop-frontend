@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Search, Star } from 'lucide-react';
 import ProductNavbar from './productNavbar';
-
+import Navbar from "./navbar";
 import Footer from './footer';
 import axios from 'axios';
 import HS1 from '../assets/sonyhp.jpg'
@@ -221,7 +221,7 @@ const HeadphoneProductPage = () => {
 
   return (
     <section>
-
+<Navbar/>
 <ProductNavbar/>
 
     <div className="flex flex-col lg:flex-row gap-6 p-4">

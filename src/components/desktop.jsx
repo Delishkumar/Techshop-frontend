@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Star, Search } from 'lucide-react';
-
+import Navbar from "./navbar";
 import ProductNavbar from './productNavbar';
 import Footer from './footer';
 import LD1 from '../assets/delldesktop2.jpg'
@@ -227,7 +227,7 @@ const [addedItems, setAddedItems] = useState([]);
 
   return (
     <section>
-
+<Navbar/>
 <ProductNavbar/>
 
     <div className="flex flex-col lg:flex-row gap-6 p-4">
@@ -273,7 +273,7 @@ const [addedItems, setAddedItems] = useState([]);
           <Search className="text-gray-500" size={30} />
           <input
             type="text"
-            placeholder="Search laptops..."
+            placeholder="Search Desktops..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full outline-none bg-transparent text-sm"

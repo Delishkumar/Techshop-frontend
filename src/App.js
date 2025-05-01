@@ -3,7 +3,7 @@ import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Signup from "./components/signub";
 import Login from "./components/login";
 import Home from "./components/home";
-import Navbar from "./components/navbar";
+
 import Product from './components/product'
 import Deals from "./components/Deals";
 import LaptopProductList from "./components/laptopos";
@@ -19,15 +19,18 @@ import "react-toastify/dist/ReactToastify.css";
 import OrderNow from "./components/orderNow";
 
 
-
 function App(){
 
+
+ 
  
   return(
     <BrowserRouter>
-    <Navbar/>
+    
   <ToastContainer position="top-center" autoClose={3000} />
+ 
     <Routes>
+   
       <Route path="/signub" element={<Signup/>}></Route>
 
       <Route path="/login" element={<Login/>}></Route>

@@ -1,5 +1,5 @@
 
-
+import Navbar from "./navbar";
 import Footer from "./footer";
 import { useState } from "react";
 import axios from "axios";
@@ -41,9 +41,9 @@ const ContactForm = () => {
     <section>
         
 
-
+<Navbar/>
     
-
+<div>
         { !status ?( <div className="max-w-60 h-screen mx-auto mt-10 p-6">
           <AnimatePresence>
              <motion.div
@@ -111,7 +111,7 @@ const ContactForm = () => {
    {isSubmitting ? "Sending..." : "Send Message"}
         </button>  </form>
         </div>)}
-    
+        </div>
     <Footer/>
     </section>
   );

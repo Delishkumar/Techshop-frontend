@@ -9,7 +9,7 @@ import axios from "axios";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [userMenuOpen, setUserMenuOpen] = useState(true)
+  const [userMenuOpen, setUserMenuOpen] = useState(false)
 
 
   const [cartCount, setCartCount] = useState(0);
@@ -27,7 +27,7 @@ function Navbar() {
     fetchCartCount();
 
   
-    const interval = setInterval(fetchCartCount, 10000);
+    const interval = setInterval(fetchCartCount, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -39,7 +39,7 @@ function Navbar() {
 
        navigate("/login")
 
-      setUserMenuOpen(false)
+      setUserMenuOpen(true)
 
     } catch (err) {
       console.error('Logout error', err);
@@ -72,18 +72,18 @@ function Navbar() {
         <div className="flex items-center space-x-4">
 
 {/* User Profile/Login */}
-{userMenuOpen ? (<button
-        onClick={handleLogout}
-      className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-red-600 hover:bg-red-50 rounded-md transition"
-    >
-      <LogOut className="w-5 h-5" />
-      <span>Logout</span>
-    </button>):(   <button
+{userMenuOpen ? (   <button
       onClick={handleLoginClick}
       className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition"
     >
       <LogIn className="w-5 h-5" />
       <span>Login</span>
+    </button>):(<button
+        onClick={handleLogout}
+      className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-red-600 hover:bg-red-50 rounded-md transition"
+    >
+      <LogOut className="w-5 h-5" />
+      <span>Logout</span>
     </button>)}
 
           {/* Cart */}
@@ -109,7 +109,7 @@ function Navbar() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white shadow px-4 py-2 space-y-2">
           <Link to="/" className="block text-gray-700 hover:text-blue-600">Home</Link>
-          <Link to="/products" className="block text-gray-700 hover:text-blue-600">Products</Link>
+          <Link to="/product" className="block text-gray-700 hover:text-blue-600">Products</Link>
           <Link to="/deals" className="block text-gray-700 hover:text-blue-600">Deals</Link>
           <Link to="/contact" className="block text-gray-700 hover:text-blue-600">Contact</Link>
         </div>

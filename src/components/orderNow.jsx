@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation,useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
+import Navbar from "./navbar";
 const OrderNow = () => {
   const location = useLocation();
   const navigate = useNavigate()
@@ -50,6 +51,8 @@ const OrderNow = () => {
   };
 
   return (
+    <section>
+      <Navbar/>
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6">Order Now</h1>
 
@@ -120,6 +123,7 @@ const OrderNow = () => {
         Place Order
       </button>
     </div>
+    </section>
   );
 };
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Search, Star } from 'lucide-react';
 import Footer from './footer';
-
+import Navbar from './navbar';
 import ProductNavbar from './productNavbar';
 import WA1 from '../assets/applewatch1.jpg'
 import WA2 from '../assets/applewatch2.jpg'
@@ -222,7 +222,7 @@ const [addedItems, setAddedItems] = useState([]);
 
   return (
     <section>
-        
+        <Navbar/>
         <ProductNavbar/>
     <div className="flex flex-col lg:flex-row gap-6 p-4">
       {/* Left Filters */}

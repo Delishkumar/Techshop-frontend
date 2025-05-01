@@ -4,7 +4,7 @@ import { auth } from "./firebase";
 import Mayoffer from "./mayoffer";
 import Footer from "./footer";
 import DealCard from "./dealscard";
-
+import Navbar from "./navbar";
 function Deals(){
 
       const navigate = useNavigate();
@@ -22,7 +22,7 @@ function Deals(){
 
     return(
         <section>
-
+<Navbar/>
 <Mayoffer/>
 
 <DealCard/>

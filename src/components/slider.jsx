@@ -29,7 +29,7 @@ const Slider = () => {
 
   return (
     <div className="relative w-full overflow-hidden h-64 md:h-96 ">
-      <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${current * 100}%)`, width: `${images.length * 28}%` }}>
+      <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${current * 100}%)`, width: `${images.length * 30}%` }}>
         {images.map((img, index) => (
           <img key={index} src={img} alt={`Slide ${index + 1}`} className="w-full flex-shrink-0 object-cover" />
         ))}

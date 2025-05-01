@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Star, Search } from 'lucide-react';
 import ProductNavbar from './productNavbar';
 import Footer from './footer';
+import Navbar from "./navbar";
 import MS1 from '../assets/samsungmonitor1.jpg'
 import MS2 from '../assets/samsungmonitor2.jpg'
 import MS3 from '../assets/samsungmonitor3.jpg'
@@ -224,7 +225,7 @@ const MonitorProductList = () => {
 
   return (
     <section>
-
+<Navbar/>
 <ProductNavbar/>
 
     <div className="flex flex-col lg:flex-row gap-6 p-4">
@@ -270,7 +271,7 @@ const MonitorProductList = () => {
           <Search className="text-gray-500" size={30} />
           <input
             type="text"
-            placeholder="Search laptops..."
+            placeholder="Search monitors..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full outline-none bg-transparent text-sm"

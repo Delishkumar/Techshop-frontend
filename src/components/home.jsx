@@ -1,4 +1,4 @@
-
+import Navbar from "./navbar";
 import { useNavigate } from "react-router-dom"
 import { auth } from "./firebase";
 import { useEffect } from "react";
@@ -11,6 +11,7 @@ import TrendingWatch from "./trendingWatch";
 import TopSale from "./topsale";
 import PBrands from "./pBrands";
 import Footer from "./footer";
+
 const Home = () =>{
   const navigate = useNavigate();
 
@@ -27,7 +28,7 @@ const Home = () =>{
 
     return(
         <div id="home">
-        
+        <Navbar/>
         <Slider/>
         <CategoryGrid/>
         <TrendingLaptop/>

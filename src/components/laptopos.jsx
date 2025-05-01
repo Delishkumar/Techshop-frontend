@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Star, Search } from 'lucide-react';
-
+import Navbar from './navbar';
 import ProductNavbar from './productNavbar';
 import Footer from './footer';
 import LD1 from '../assets/dellsmartchoice.jpg'
@@ -213,7 +213,7 @@ const LaptopProductList = () => {
 
   return (
     <section>
-
+<Navbar/>
 <ProductNavbar/>
 
     <div className="flex flex-col lg:flex-row gap-6 p-4">
