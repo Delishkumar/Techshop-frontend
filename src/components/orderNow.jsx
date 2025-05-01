@@ -74,6 +74,9 @@ const OrderNow = () => {
           <span>₹{totalPrice.toFixed(2)}</span>
         </div>
       </div>
+      <div className='text-center'><p>Cash on Delivery Only</p>
+      <p className='text-lime-500'>Delivery is scheduled for tomorrow</p>
+      </div>
 
       {/* User Info Form */}
       <div className="bg-white shadow-md rounded-lg p-4 mb-6">

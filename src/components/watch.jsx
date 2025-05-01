@@ -156,7 +156,7 @@ const smartwatches = [
     price: 2999,
     rating: 4.2,
     image: WN4,
-     details:"Sleep Tracker, Crash Detection"
+     details:"Sleep Tracker, Crash Detection noise re4"
   },
   {
     id: 16,
@@ -165,7 +165,7 @@ const smartwatches = [
     price: 3999,
     rating: 4.1,
     image: WB4,
-     details:"Bluerey & Sleep Tracker, Crash Detection"
+     details:"Bluerey & Sleep Tracker, Crash detection"
   },
   
 ];
@@ -288,7 +288,7 @@ const [addedItems, setAddedItems] = useState([]);
                   className="w-full h-40 object-contain mb-4"
                 />
                 <h3 className="font-semibold text-lg">{watch.name}</h3>
-                <p>{watch.details}</p>
+                <p className='p-2'>{watch.details}</p>
                 <p className="text-gray-600 mb-2">₹{watch.price.toLocaleString()}</p>
                 <div className="flex items-center justify-center gap-1 text-yellow-500 mb-2">
                   {Array.from({ length: 5 }, (_, i) => (

@@ -22,13 +22,13 @@ const categories = [
 const ProductNavbar = () => {
   return (
     <nav className="  bg-slate-100 shadow-md rounded-xl px-4 py-2 sticky z-50 top-14">
-      <div className="grid grid-cols-3 md:grid-cols-6  min-w-max   ">
+      <div className="grid grid-cols-3 md:grid-cols-6  min-w-max  gap-2 ">
         {categories.map((category) => (
           <NavLink
             to={category.path}
             key={category.name}
             className={({ isActive }) =>
-              `flex items-center gap-2 px-3 py-2 rounded-md whitespace-nowrap transition-all ${
+              `flex items-center gap-2 md:px-3 md:py-2 rounded-md whitespace-nowrap transition-all ${
                 isActive ? 'bg-blue-100 text-blue-600 font-semibold' : 'hover:bg-gray-100 text-gray-700'
               }`
             }

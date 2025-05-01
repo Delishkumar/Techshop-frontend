@@ -29,7 +29,7 @@ const handleLogin = async (e) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       setSuccess(true);
-      setTimeout(() => navigate('/'), 2500);
+      setTimeout(() => navigate('/'), 6500);
     } catch (err) {
       setError(err.message);
     }
@@ -50,7 +50,7 @@ const handleLogin = async (e) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
-            className="bg-white bg-opacity-90 p-8 rounded-xl shadow-lg max-w-md w-full space-y-5"
+            className="bg-white bg-opacity-90 p-8 rounded-xl shadow-lg max-w-md w-full space-y-5 m-5"
           >
             <h2 className="text-3xl font-mono text-center ">
               Welcome Back

@@ -41,7 +41,7 @@ const categories = [
 
 const CategoryGrid = () => {
   return (
-    <section className="px-4 m-0  max-w-7xl mx-auto">
+    <section className="px-4 m-0  max-w-7xl mx-auto mt-4">
       <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center">Shop by Category</h2>
       <div className="grid gap-8 grid-cols-3 md:grid-cols-6  ">
         {categories.map((category, index) => (
