@@ -54,7 +54,7 @@ const CategoryGrid = () => {
           to={category.path}
           key={index}>
             <img src={category.image} alt={category.name} className="w-full h-34 object-cover" />
-            <div className="p-2  text-center text-base md:text-lg font-medium">
+            <div className="p-2  text-center text-sm md:text-lg font-medium">
               {category.name}
               
             </div>

@@ -30,13 +30,13 @@ const navigate = useNavigate()
     e.preventDefault();
     const reviewWithDate = {
       ...review,
-      date: new Date().toISOString(), // ISO format date
+      date: new Date().toISOString(), 
     };
   
     try {
       const res = await axios.put(`https://techshop-backend-cwww.onrender.com/api/products/${id}`, reviewWithDate);
-      setProduct(res.data.product); // Update product with new review
-      setReview({ user: '', comment: '', rating: 0 }); // Reset form
+      setProduct(res.data.product); 
+      setReview({ user: '', comment: '', rating: 0 }); 
        toast.success(" added to Review sucessfully!" );
     } catch (error) {
       console.error("Error adding review:", error);

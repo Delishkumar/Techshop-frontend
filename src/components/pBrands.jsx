@@ -11,9 +11,9 @@ function PBrands(){
                 <h1 className="text-white font-bold text-4xl md:text-6xl p-3">The Premium Edit</h1>
                 <h2 className="text-white font-semibold text-2xl md:text-4xl p-8">Experience Timeless Sophistication With Premium Brands</h2>
                 
-            <button className="text-slate-800 font-semibold text-2xl md:text-4xl p-3 borde rounded-full bg-white">EXPLORE NOW</button>
+         <Link to={"/product"} > <button className="text-slate-800 font-semibold text-xl md:text-4xl p-3 borde rounded-full bg-white">EXPLORE NOW</button>
 
-
+         </Link> 
             <div className='grid grid-cols-5 gap-3 p-5'>
                 <Link to={"/laptop"}>
                 <img src={PB1} alt='pb' className=' hover:border-4 hover:border-blue-500 hover:rounded-lg'></img>

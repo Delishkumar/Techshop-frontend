@@ -63,7 +63,7 @@ const Products = () => {
     <section>
       <Navbar />
       <ProductNavbar />
-      <div className="p-4 h-screen">
+      <div className="p-4">
         <h2 className="text-3xl text-center font-bold text-orange-500 mb-4">All Products</h2>
 
         {/* 🔍 Search */}
