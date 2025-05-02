@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { auth } from './firebase';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+
 import axios from 'axios';
 import Navbar from './navbar';
 import ProductNavbar from './productNavbar';
@@ -63,7 +63,7 @@ const Products = () => {
     <section>
       <Navbar />
       <ProductNavbar />
-      <div className="p-4">
+      <div className="p-4 h-screen">
         <h2 className="text-3xl text-center font-bold text-orange-500 mb-4">All Products</h2>
 
         {/* 🔍 Search */}
@@ -80,7 +80,7 @@ const Products = () => {
         {/* 🧱 Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts.map((product) => (
-            <Link to={`/product/${product._id}`} key={product._id}>
+            
             <ProductCard
               key={product._id}
               product={product}
@@ -88,7 +88,7 @@ const Products = () => {
               onAddToCart={addToCart}
             
             />
-            </Link>
+            
           ))}
         </div>
       </div>

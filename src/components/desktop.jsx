@@ -96,7 +96,7 @@ const laptops = [
     image: LH2,
     details:" FHD,One PC (16GB RAM/1TB SSD/Windows 11/)"
   },
-,
+
   {
     id: 9,
     name: 'Dell 13th gen',

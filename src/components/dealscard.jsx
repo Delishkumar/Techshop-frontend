@@ -7,8 +7,8 @@ import COMPUTER from '../assets/delldesktop2.jpg'
 import MONITER from '../assets/dellmonitor3.jpg'
 import HEADPHONE2 from '../assets/boathp1.jpg'
 import SMARTWATCH2 from '../assets/boatwatch2.jpg'
-
-
+import { toast } from "react-toastify";
+import axios from 'axios';
 const products = [
   {
     id: 1,
@@ -71,6 +71,12 @@ const products = [
 const ProductCard = ({ product }) => {
   const offerPrice = (product.price * 0.8).toFixed(2); // 20% off
 
+  const addToCart = async (product) => {
+        await axios.post("https://techshop-backend-cwww.onrender.com/api/cart", product);
+  
+          toast.success(`${product.name}  added to cart sucessfully!` );
+      };
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 50 }}
@@ -94,6 +100,12 @@ const ProductCard = ({ product }) => {
       <div className="flex items-center space-x-2 mt-2">
         <p className="text-gray-500 line-through">₹{product.price}</p>
         <p className="text-green-600 font-bold">₹{offerPrice}</p>
+        <button
+        onClick={() => addToCart(product)}
+        className="mt-4 bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 transition duration-300"
+      >
+        Add to Cart
+      </button>
       </div>
     </motion.div>
   );
