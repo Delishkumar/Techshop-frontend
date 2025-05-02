@@ -95,7 +95,7 @@ const laptops = [
     image: TA2,
      details:" 4 GB RAM, 64 GB ROM Dual speaker"
   },
-,
+
   {
     id: 9,
     name: 'Samsung 13th gen',
@@ -179,6 +179,9 @@ const priceRanges = [
 ];
 
 const TabProductList = () => {
+
+
+  
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -322,7 +325,7 @@ const TabProductList = () => {
           )}
         </div>
 
-        
+       
       </section>
     </div>
     <Footer/>

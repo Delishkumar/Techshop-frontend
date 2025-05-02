@@ -20,7 +20,7 @@ const categories = [
   {
     name: "Headphones",
     image: headphone,
-    path:"/headphone"
+    path:"/product"
   },
   {
     name: "Smartwatchs",

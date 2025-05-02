@@ -17,7 +17,7 @@ import Card from "./components/cart";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import OrderNow from "./components/orderNow";
-
+import ProductDetails from "./components/productdetails";
 
 function App(){
 
@@ -58,6 +58,9 @@ function App(){
       <Route path="/monitor" element={<MonitorProductList  />}></Route>
 
       <Route path="/desktop" element={<DesktopProductList  />}></Route>
+
+      <Route path="/product/:id" element={<ProductDetails />} />
+
     </Routes>
     </BrowserRouter>
   );

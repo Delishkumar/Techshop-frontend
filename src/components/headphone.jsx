@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState} from 'react';
 import { Search, Star } from 'lucide-react';
 import ProductNavbar from './productNavbar';
 import Navbar from "./navbar";
@@ -21,7 +21,11 @@ import HB2 from '../assets/boathp2.jpg'
 import HB3 from '../assets/boathp3.jpg'
 import HB4 from '../assets/boathp4.jpg'
 import { toast } from "react-toastify";
-const headphones = [
+
+
+
+
+const products = [
   {
     id: 1,
     name: 'Sony WH-1000XM5',
@@ -30,6 +34,7 @@ const headphones = [
     rating: 4.8,
     image: HS1,
     details:"120HRS Battery,IPX4, v.5.2 Bluetooth",
+    instock:"9"
   },
   {
     id: 2,
@@ -39,6 +44,7 @@ const headphones = [
     rating: 4.7,
     image: HO1,
     details:"60HRS Battery,IPX6, v.6.2 Bluetooth ",
+    instock:"12"
   },
   {
     id: 3,
@@ -48,6 +54,7 @@ const headphones = [
     rating: 4.2,
     image: HJ1,
     details:"TWS Buds 110HRS Battery,IPz4, v.4.2 ",
+    instock:"5"
   },
   {
     id: 4,
@@ -57,6 +64,7 @@ const headphones = [
     rating: 4.1,
     image: HB1,
     details:"120HRS Battery,IPX4, v.5.2 Bluetooth",
+    instock:"2"
   },
   {
     id: 5,
@@ -66,6 +74,7 @@ const headphones = [
     rating: 4.2,
     image: HJ2,
     details:"120HRS Battery,IPX4, v.5.2 Bluetooth",
+    instock:"16"
   },
   {
     id: 6,
@@ -75,6 +84,7 @@ const headphones = [
     rating: 4.1,
     image: HB2,
     details:"120HRS Battery,IPX4, v.5.2 Bluetooth",
+    instock:"7"
   },
   {
     id: 7,
@@ -84,6 +94,7 @@ const headphones = [
     rating: 4.8,
     image: HS2,
     details:"120HRS Battery,IPX4, v.5.2 Bluetooth",
+    instock:"3"
   },
   {
     id: 8,
@@ -93,6 +104,7 @@ const headphones = [
     rating: 4.7,
     image: HO2,
     details:"80HRS Battery,IPX4, v.5.2 Bluetooth",
+    instock:"16"
   },
   {
     id: 9,
@@ -102,6 +114,7 @@ const headphones = [
     rating: 4.8,
     image: HS3,
     details:"120HRS Battery,IPX4, v.5.2 Bluetooth",
+    instock:"13"
   },
   {
     id: 10,
@@ -111,6 +124,7 @@ const headphones = [
     rating: 4.7,
     image: HO3,
     details:"120HRS Battery,IPX4, v.5.2 Bluetooth",
+    instock:"7"
   },
   {
     id: 12,
@@ -120,6 +134,7 @@ const headphones = [
     rating: 4.2,
     image: HJ3,
     details:"IPX4, v.5.2 Bluetooth Display",
+    instock:"19"
   },
   {
     id: 13,
@@ -129,6 +144,7 @@ const headphones = [
     rating: 4.1,
     image: HB3,
     details:"Lion Battery,IPX4, v.5.2 Bluetooth",
+    instock:"8"
   },
   {
     id: 14,
@@ -138,6 +154,7 @@ const headphones = [
     rating: 4.2,
     image: HJ4,
     details:"130HRS Battery,IPX4, v.5.2 Bluetooth",
+    instock:"0"
   },
   {
     id: 15,
@@ -147,6 +164,7 @@ const headphones = [
     rating: 4.1,
     image: HB4,
     details:"IPX4,180HRS Battery, v.5.2 Bluetooth",
+    instock:"1"
   },
   {
     id: 16,
@@ -156,6 +174,7 @@ const headphones = [
     rating: 4.8,
     image: HS4,
     details:" TWS Ear Buds,60HRS Battery,IPX4",
+    instock:"3"
   },
   {
     id: 17,
@@ -165,8 +184,14 @@ const headphones = [
     rating: 4.7,
     image: HO4,
     details:"80HRS Battery,IPX4, v.5.2 Bluetooth",
+    instock:"15"
   },
+
 ];
+
+
+
+
 
 const brands = ['Sony', 'Onepluse', 'JBL', 'boAt'];
 const priceRanges = [
@@ -176,6 +201,11 @@ const priceRanges = [
 ];
 
 const HeadphoneProductPage = () => {
+
+
+ 
+  
+
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -209,7 +239,7 @@ const HeadphoneProductPage = () => {
     });
   };
 
-  const filteredHeadphones = headphones.filter((product) => {
+  const filteredHeadphones = products.filter((product) => {
     const matchesBrand =
       selectedBrands.length === 0 || selectedBrands.includes(product.brand);
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -311,6 +341,9 @@ const HeadphoneProductPage = () => {
             >
               {addedItems.includes(product.name) ? "Added" : "Add to Cart"}
             </button>
+            
+
+          
               </div>
             ))
           ) : (

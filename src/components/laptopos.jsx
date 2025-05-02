@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState} from 'react';
 import { Star, Search } from 'lucide-react';
 import Navbar from './navbar';
 import ProductNavbar from './productNavbar';
@@ -95,7 +95,7 @@ const laptops = [
     image: LH2,
     details:"4GB 2TB FHD Display"
   },
-,
+
   {
     id: 9,
     name: 'Dell 13th gen',
@@ -179,6 +179,11 @@ const priceRanges = [
 ];
 
 const LaptopProductList = () => {
+
+  
+    
+
+
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -325,7 +330,7 @@ const LaptopProductList = () => {
           )}
         </div>
 
-       
+      
           
       </section>
     </div>

@@ -28,7 +28,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden md:h-72">
       <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${current * 100}%)`, width: `${images.length * 30}%`  }}>
         {images.map((img, index) => (
           <img key={index} src={img} alt={`Slide ${index + 1}`} className="w-full flex-shrink-0 object-cover" />
@@ -36,15 +36,15 @@ const Slider = () => {
       </div>
 
       {/* Navigation Buttons */}
-      <button onClick={prevSlide} className="absolute top-1/2 md:top-1/3 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
+      <button onClick={prevSlide} className="absolute top-1/2  left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
         &#10094;
       </button>
-      <button onClick={nextSlide} className="absolute top-1/2 md:top-1/3 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
+      <button onClick={nextSlide} className="absolute top-1/2  right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
         &#10095;
       </button>
 
       {/* Dots */}
-      <div className="absolute -bottom-28  left-1/2 transform -translate-x-1/2 flex gap-2 md:bottom-20">
+      <div className="absolute -bottom-28  left-1/2 transform -translate-x-1/2 flex gap-2 md:bottom-10">
         {images.map((_, index) => (
           <button
             key={index}

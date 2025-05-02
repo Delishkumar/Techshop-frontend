@@ -77,7 +77,7 @@ const laptops = [
     details:", PC (20GB RAM/3TB SSD/Windows 11/)"
   },
   
-  ,
+  
   {
     id: 7,
     name: 'Dell Inspiron 12',
@@ -180,6 +180,12 @@ const priceRanges = [
 ];
 
 const DesktopProductList = () => {
+
+
+
+  
+
+
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');

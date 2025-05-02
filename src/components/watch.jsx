@@ -178,6 +178,10 @@ const priceRanges = [
 ];
 
 const WatchProductPage = () => {
+
+
+
+
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");

@@ -63,10 +63,11 @@ const Card = () => {
           {cartItems.map((item, index) => (
             <li key={index} className=" p-2 inline  ">
                
-                <img src={item.image} alt="productimg"></img>
-                <div className="flex justify-around items-center">
-                    <div>
+                <img src={item.image} alt="productimg" className="h-48"></img>
+                <div className="flex justify-around items-center p-2">
+                    <div className="p-2">
               <h2 className="font-semibold">{item.name}</h2>
+              <h2 className="font-semibold">{item.details}</h2>
               <h3 className="text-sm text-gray-600">₹{item.price}</h3>
               <div className="text-sm text-gray-600">
                    

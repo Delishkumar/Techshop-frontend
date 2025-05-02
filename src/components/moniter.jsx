@@ -96,7 +96,7 @@ const laptops = [
     image: ML2,
        details:" HD LED Monitor | Refresh Rate 60hz"
   },
-,
+
   {
     id: 9,
     name: 'Dell 13th gen',
@@ -180,6 +180,9 @@ const priceRanges = [
 ];
 
 const MonitorProductList = () => {
+
+
+
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -321,7 +324,7 @@ const MonitorProductList = () => {
             <p className="text-center col-span-full text-gray-500">No moniter found.</p>
           )}
         </div>
-
+      
     
       </section>
     </div>
