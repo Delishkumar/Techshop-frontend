@@ -1,5 +1,5 @@
 
-import { LogOut, Menu, ShoppingCart, X, LogIn } from "lucide-react";
+import { LogOut, Menu, ShoppingCart, X, LogIn,User } from "lucide-react";
 import {  useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "./firebase";
@@ -93,7 +93,7 @@ function Navbar() {
             rounded-full flex items-center justify-center">  {cartCount}</span> )}
   </Link>    
 
-          
+          <Link to={"/profile"}><User className=" w-6 h-6" /></Link>
 
           {/* Mobile menu toggle */}
           <button

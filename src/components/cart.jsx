@@ -88,7 +88,7 @@ const Card = () => {
 
 <div className=" text-right p-10 text-lg font-bold ">
             Total: ₹{totalPrice.toFixed(2)}<br/>
-           <Link to={"/ordernow"}  state={{ cartItems, totalPrice }}><button    disabled={cartItems.length === 0}
+           <Link to={"/ordernow"}  state={{ cartItems, totalPrice }}> <button    disabled={cartItems.length === 0}
                className={`mt-2 px-4 py-1 rounded text-white ${
                 cartItems.length === 0
                   ? "bg-gray-400 cursor-not-allowed"

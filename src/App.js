@@ -18,7 +18,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import OrderNow from "./components/orderNow";
 import ProductDetails from "./components/productdetails";
-
+import Profile from "./profile";
 function App(){
 
 
@@ -60,6 +60,7 @@ function App(){
       <Route path="/desktop" element={<DesktopProductList  />}></Route>
 
       <Route path="/product/:id" element={<ProductDetails />} />
+     <Route path="profile" element={<Profile/>}></Route>
 
     </Routes>
     </BrowserRouter>

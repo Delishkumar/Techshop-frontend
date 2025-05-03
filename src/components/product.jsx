@@ -7,12 +7,13 @@ import Navbar from './navbar';
 import ProductNavbar from './productNavbar';
 import ProductCard from './productcart';
 import { toast } from "react-toastify";
-import Footer from './footer';
+
 
 const Products = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+ 
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
@@ -23,6 +24,7 @@ const Products = () => {
       try {
         const res = await axios.get('https://techshop-backend-cwww.onrender.com/api/products');
         setProducts(res.data);
+    
       } catch (error) {
         console.error('Error fetching products:', error);
       }
@@ -57,7 +59,7 @@ const Products = () => {
   });
   
 
-  ;
+  if (!products) return <p className="text-center mt-10 text-red-500">Loading...</p> ;
 
   return (
     <section>
@@ -92,7 +94,7 @@ const Products = () => {
           ))}
         </div>
       </div>
-      <Footer/>
+      
     </section>
   );
 };
