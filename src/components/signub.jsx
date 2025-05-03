@@ -23,7 +23,7 @@ function Signup() {
       await createUserWithEmailAndPassword(auth, email, password);
       setError("");
       setSuccess(true);
-      setTimeout(() => navigate("/login"), 6500); 
+      setTimeout(() => navigate("/login"), 10000); 
     } catch (err) {
       setError(err.message);
     }

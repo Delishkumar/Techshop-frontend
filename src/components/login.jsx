@@ -29,7 +29,7 @@ const handleLogin = async (e) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       setSuccess(true);
-      setTimeout(() => navigate('/'), 6500);
+      setTimeout(() => navigate('/'), 10000);
     } catch (err) {
       setError(err.message);
     }
