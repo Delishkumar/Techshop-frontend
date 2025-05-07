@@ -18,7 +18,7 @@ export default function Login() {
       }
     
     })
-  },[])
+  },[navigate])
   
 const handleLogin = async (e) => {
     
@@ -29,7 +29,7 @@ const handleLogin = async (e) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       setSuccess(true);
-      setTimeout(() => navigate('/'), 350000);
+      setTimeout(() => navigate('/'), 35000);
     } catch (err) {
       setError(err.message);
     }

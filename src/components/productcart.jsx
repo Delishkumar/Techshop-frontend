@@ -15,6 +15,7 @@ const ProductCard = ({ product, onAddToCart }) => {
       <img
         src={product.image}
         alt={product.name}
+        
         className="w-full h-48 object-contain mb-2 rounded"
       />
       <div className="text-center">

@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { Link } from 'react-router-dom';
 
 
+
 const brands = ['Dell', 'HP', 'Lenovo', 'Asus'];
 
 const priceRanges = [
@@ -145,11 +146,13 @@ const LaptopProductList = () => {
                     key={laptop.id}
                     className="bg-white p-4 rounded-xl shadow-md flex flex-col items-center text-center"
                   >
-                    <img
-                      src={laptop.image}
-                      alt={laptop.name}
-                      className="w-full h-40 object-contain mb-4"
-                    />
+<img
+src={laptop.image}
+alt={laptop.name}   className="w-full h-40 object-contain mb-4"
+                />
+
+
+
                     <h3 className="font-semibold text-lg">{laptop.name}</h3>
                     <p className="text-gray-800 mb-2">{laptop.details}</p>
                     <p className="text-gray-800 mb-2">₹{laptop.price.toLocaleString()}</p>

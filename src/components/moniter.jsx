@@ -24,6 +24,7 @@ const MonitorProductList = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [addedItems, setAddedItems] = useState([]);
 
+
   // Fetch monitors from backend
   useEffect(() => {
     const fetchMonitors = async () => {
@@ -40,7 +41,6 @@ const MonitorProductList = () => {
     };
     fetchMonitors();
   }, []);
-
 
 
   const addToCart = async (product) => {
