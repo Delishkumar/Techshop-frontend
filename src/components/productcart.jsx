@@ -24,7 +24,7 @@ const ProductCard = ({ product, onAddToCart }) => {
         <p className={getRatingColor(product.rating)}><strong>Rating:</strong> ⭐ {product.rating}</p>
         <p className="text-sm text-gray-600 mb-2">{product.details}</p>
         <p className={+product.instock > 0 ? "text-green-600" : "text-red-600"}>
-          {+product.instock > 0 ? `In Stock: ${product.instock}` : 'Out of Stock'}
+          {+product.stock > 0 ? `In Stock: ${product.stock}` : 'Out of Stock'}
         </p>
       </div>
       <div className='flex justify-evenly'>

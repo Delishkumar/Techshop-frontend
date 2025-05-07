@@ -23,7 +23,7 @@ function Signup() {
       await createUserWithEmailAndPassword(auth, email, password);
       setError("");
       setSuccess(true);
-      setTimeout(() => navigate("/login"), 10000); 
+      setTimeout(() => navigate("/login"), 350000); 
     } catch (err) {
       setError(err.message);
     }
@@ -37,7 +37,7 @@ function Signup() {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 30 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             className="bg-white bg-opacity-90 p-8 rounded-xl shadow-xl max-w-md w-full space-y-5 m-5"
           >
             <h2 className="text-2xl font-bold text-center text-blue-600">Create Account</h2>

@@ -1,22 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; 
 import { auth } from './firebase';
 import { useNavigate } from 'react-router-dom';
-
 import axios from 'axios';
 import Navbar from './navbar';
 import ProductNavbar from './productNavbar';
 import ProductCard from './productcart';
 import { toast } from "react-toastify";
 
-
 const Products = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
- 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    auth.onAuthStateChanged((user) => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
       if (!user) navigate("/login");
     });
 
@@ -24,42 +22,36 @@ const Products = () => {
       try {
         const res = await axios.get('https://techshop-backend-cwww.onrender.com/api/products');
         setProducts(res.data);
-    
       } catch (error) {
         console.error('Error fetching products:', error);
+        toast.error("Failed to load products.");
+      } finally {
+        setLoading(false);
       }
     };
 
     getProducts();
+
+    return () => unsubscribe(); // Clean up auth listener
   }, [navigate]);
 
+  const addToCart = async (product) => {
+    await axios.post("https://techshop-backend-cwww.onrender.com/api/cart", product);
+    toast.success(`${product.name} added to cart successfully!`);
+  };
 
-
-   const addToCart = async (product) => {
-      await axios.post("https://techshop-backend-cwww.onrender.com/api/cart", product);
-
-        toast.success(`${product.name}  added to cart sucessfully!` );
-    };
-
-
-    const handleProductClick = (id) => {
-      navigate(`/product/${id}`);
-    };
-
+  const handleProductClick = (id) => {
+    navigate(`/product/${id}`);
+  };
 
   const filteredProducts = products.filter((product) => {
     const name = product?.name || '';
     const brand = product?.brand || '';
-
-
     return (
       name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       brand.toLowerCase().includes(searchTerm.toLowerCase())
     );
   });
-  
-
-  if (!products) return <p className="text-center mt-10 text-red-500">Loading...</p> ;
 
   return (
     <section>
@@ -79,22 +71,28 @@ const Products = () => {
           />
         </div>
 
-        {/* 🧱 Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredProducts.map((product) => (
-            
-            <ProductCard
-              key={product._id}
-              product={product}
-              onClick={() => handleProductClick(product._id)}
-              onAddToCart={addToCart}
-            
-            />
-            
-          ))}
-        </div>
+        {/* 🌀 Loading */}
+        {loading ? (
+          <div className="flex justify-center items-center h-60">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-orange-500 border-solid"></div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((product) => (
+                <ProductCard
+                  key={product._id}
+                  product={product}
+                  onClick={() => handleProductClick(product._id)}
+                  onAddToCart={addToCart}
+                />
+              ))
+            ) : (
+              <p className="text-center col-span-full text-gray-500">No products found.</p>
+            )}
+          </div>
+        )}
       </div>
-      
     </section>
   );
 };

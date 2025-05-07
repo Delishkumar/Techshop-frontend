@@ -46,7 +46,10 @@ const navigate = useNavigate()
 
   
 
-  if (!product) return <p className="text-center mt-10 text-red-500">Loading...</p>;
+  if (!product) return  <div className="flex justify-center items-center h-64">
+  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500"></div>
+</div>
+;
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white rounded shadow text-center">
@@ -56,6 +59,7 @@ const navigate = useNavigate()
       <p className="text-green-600 font-semibold"><strong>Price:</strong> ₹{product.price}</p>
       <p><strong>Rating:</strong> ⭐ {product.rating}</p>
       <p className="text-gray-700"><strong>Details:</strong> {product.details}</p>
+      <p className="text-gray-700"><strong>Description:</strong> {product.description}</p>
       <p className={+product.instock > 0 ? 'text-green-500' : 'text-red-500'}>
         {+product.instock > 0 ? `In Stock: ${product.instock}` : 'Out of Stock'}
       </p>
