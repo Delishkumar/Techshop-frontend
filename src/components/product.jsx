@@ -32,7 +32,7 @@ const Products = () => {
 
     getProducts();
 
-    return () => unsubscribe(); // Clean up auth listener
+    return () => unsubscribe(); 
   }, [navigate]);
 
   const addToCart = async (product) => {
@@ -47,11 +47,14 @@ const Products = () => {
   const filteredProducts = products.filter((product) => {
     const name = product?.name || '';
     const brand = product?.brand || '';
+    const category = product?.category || '';
     return (
       name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      brand.toLowerCase().includes(searchTerm.toLowerCase())
+      brand.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      category.toLowerCase().includes(searchTerm.toLowerCase())
     );
   });
+  
 
   return (
     <section>

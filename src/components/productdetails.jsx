@@ -56,6 +56,7 @@ const navigate = useNavigate()
       <img src={product.image} alt={product.name} className="w-full h-64 object-contain mb-4" />
       <h2 className="text-2xl font-bold text-orange-500">{product.name}</h2>
       <p className="text-gray-600"><strong>Brand:</strong> {product.brand}</p>
+      <p className="text-gray-600"><strong>Category:</strong> {product.category}</p>
       <p className="text-green-600 font-semibold"><strong>Price:</strong> ₹{product.price}</p>
       <p><strong>Rating:</strong> ⭐ {product.rating}</p>
       <p className="text-gray-700"><strong>Details:</strong> {product.details}</p>

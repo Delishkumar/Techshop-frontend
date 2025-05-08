@@ -21,6 +21,7 @@ const ProductCard = ({ product, onAddToCart }) => {
       <div className="text-center">
         <h3 className="text-lg font-semibold text-orange-600">{product.name}</h3>
         <p className="text-gray-700"><strong>Brand:</strong> {product.brand}</p>
+        <p className="text-gray-600"><strong>Category:</strong> {product.category}</p>
         <p><strong>₹</strong>{product.price}</p>
         <p className={getRatingColor(product.rating)}><strong>Rating:</strong> ⭐ {product.rating}</p>
         <p className="text-sm text-gray-600 mb-2">{product.details}</p>

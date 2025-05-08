@@ -1,32 +1,249 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { Search, Star } from 'lucide-react';
 import ProductNavbar from './productNavbar';
 import Navbar from './navbar';
 import Footer from './footer';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
+import Boat1 from '../assets/boathp1.jpg'
+import Boat2 from '../assets/boathp2.jpg'
+import Boat3 from '../assets/boathp3.jpg'
+import Boat4 from '../assets/boathp4.jpg'
+import JBL1 from '../assets/jbl4.jpg'
+import JBL2 from '../assets/jblhp1.jpg'
+import JBL3 from '../assets/jblhp2.jpg'
+import JBL4 from '../assets/jblhp3.jpg'
+import OnePlus1 from '../assets/oneplusehp1.jpg'
+import OnePlus2 from '../assets/oneplusehp2.jpg'
+import OnePlus3 from '../assets/oneplusehp3.jpg'
+import OnePlus4 from '../assets/oneplusehp4.jpg'
+import Sony1 from '../assets/sonyhp-2.jpg'
+import Sony2 from '../assets/sonyhp-3.jpg'
+import Sony3 from '../assets/sonyhp-4.jpg'
+import Sony4 from '../assets/sonyhp.jpg'
+
+
+const headphones = [
+  {
+    id: 1,
+    name: "Sony WH-1000XM5",
+    brand: "Sony",
+    category: "headphone",
+    price: 29990,
+    rating: 4.8,
+    image: Sony1,
+    description: "Industry-leading noise cancelling headphones with premium sound.",
+    details: "Over-Ear, Bluetooth 5.2, ANC, 30hr Battery, Quick Charge",
+    stock: 6,
+    createdAt: new Date()
+  },
+  {
+    id: 2,
+    name: "Sony WF-C700N",
+    brand: "Sony",
+    category: "headphone",
+    price: 8490,
+    rating: 4.4,
+    image: Sony2,
+    description: "Compact TWS earbuds with ANC and clear call quality.",
+    details: "In-Ear, ANC, 20hr Battery, IPX4, Type-C Charging",
+    stock: 10,
+    createdAt: new Date()
+  },
+  {
+    id: 3,
+    name: "Sony WH-CH520",
+    brand: "Sony",
+    category: "headphone",
+    price: 4490,
+    rating: 4.3,
+    image: Sony3,
+    description: "Lightweight wireless headphones with long-lasting battery.",
+    details: "On-Ear, Bluetooth 5.0, 50hr Battery, Multipoint Connect",
+    stock: 8,
+    createdAt: new Date()
+  },
+  {
+    id: 4,
+    name: "Sony MDR-EX155AP",
+    brand: "Sony",
+    category: "headphone",
+    price: 990,
+    rating: 4.0,
+    image: Sony4,
+    description: "Wired in-ear headphones with clear bass and built-in mic.",
+    details: "In-Ear, 3.5mm Jack, Mic, 9mm Driver, Lightweight Design",
+    stock: 20,
+    createdAt: new Date()
+  },
+
+  
+  {
+    id: 5,
+    name: "OnePlus Buds Pro 2",
+    brand: "OnePlus",
+    category: "headphone",
+    price: 11999,
+    rating: 4.6,
+    image: OnePlus1,
+    description: "Premium TWS with spatial audio and adaptive ANC.",
+    details: "In-Ear, Dual Drivers, ANC, LHDC Codec, 39hr Playback",
+    stock: 5,
+    createdAt: new Date()
+  },
+  {
+    id: 6,
+    name: "OnePlus Nord Buds 2",
+    brand: "OnePlus",
+    category: "headphone",
+    price: 2999,
+    rating: 4.3,
+    image: OnePlus2,
+    description: "Affordable earbuds with ANC and bass-heavy sound.",
+    details: "In-Ear, ANC, 12.4mm Driver, 36hr Battery, Fast Pairing",
+    stock: 12,
+    createdAt: new Date()
+  },
+  {
+    id: 7,
+    name: "OnePlus Bullets Wireless Z2",
+    brand: "OnePlus",
+    category: "headphone",
+    price: 1999,
+    rating: 4.4,
+    image: OnePlus3,
+    description: "Neckband-style Bluetooth earphones with fast charging.",
+    details: "In-Ear, Neckband, 12.4mm Bass Drivers, IP55, 30hr Battery",
+    stock: 14,
+    createdAt: new Date()
+  },
+  {
+    id: 8,
+    name: "OnePlus Buds Z2",
+    brand: "OnePlus",
+    category: "headphone",
+    price: 4499,
+    rating: 4.2,
+    image: OnePlus4,
+    description: "Compact ANC earbuds with Dolby Atmos support.",
+    details: "In-Ear, ANC, 38hr Battery, Dolby Atmos, Bluetooth 5.2",
+    stock: 9,
+    createdAt: new Date()
+  },
+
+  
+  {
+    id: 9,
+    name: "JBL Tune 760NC",
+    brand: "JBL",
+    category: "headphone",
+    price: 6499,
+    rating: 4.5,
+    image: JBL1,
+    description: "Over-ear headphones with powerful bass and ANC.",
+    details: "Over-Ear, ANC, 50hr Battery, Bluetooth 5.0, Fast Charge",
+    stock: 6,
+    createdAt: new Date()
+  },
+  {
+    id: 10,
+    name: "JBL Wave Beam",
+    brand: "JBL",
+    category: "headphone",
+    price: 3499,
+    rating: 4.3,
+    image: JBL2,
+    description: "TWS earbuds with deep bass and voice assistant support.",
+    details: "In-Ear, 32hr Battery, IP54, Touch Controls, Bluetooth 5.2",
+    stock: 11,
+    createdAt: new Date()
+  },
+  {
+    id: 11,
+    name: "JBL Endurance Run",
+    brand: "JBL",
+    category: "headphone",
+    price: 1299,
+    rating: 4.0,
+    image: JBL3,
+    description: "Wired sports earphones with sweatproof design.",
+    details: "In-Ear, 3.5mm Jack, Sweatproof, FlipHook Design",
+    stock: 15,
+    createdAt: new Date()
+  },
+  {
+    id: 12,
+    name: "JBL Live Pro 2",
+    brand: "JBL",
+    category: "headphone",
+    price: 10990,
+    rating: 4.6,
+    image: JBL4,
+    description: "Flagship earbuds with ANC and legendary JBL sound.",
+    details: "In-Ear, Adaptive ANC, 40hr Battery, 6 Mics, IPX5",
+    stock: 5,
+    createdAt: new Date()
+  },
+
+  
+  {
+    id: 13,
+    name: "boAt Rockerz 255 Pro+",
+    brand: "boAt",
+    category: "headphone",
+    price: 1499,
+    rating: 4.2,
+    image: Boat1,
+    description: "Affordable neckband with deep bass and long battery life.",
+    details: "Neckband, 40hr Battery, ASAP Charge, IPX7, Bluetooth 5.0",
+    stock: 18,
+    createdAt: new Date()
+  },
+  {
+    id: 14,
+    name: "boAt Airdopes 141",
+    brand: "boAt",
+    category: "headphone",
+    price: 1199,
+    rating: 4.1,
+    image: Boat2,
+    description: "Popular TWS earbuds with ENx noise reduction.",
+    details: "In-Ear, 42hr Battery, ENx Tech, IPX4, Type-C Charging",
+    stock: 25,
+    createdAt: new Date()
+  },
+  {
+    id: 15,
+    name: "boAt Nirvana 751 ANC",
+    brand: "boAt",
+    category: "headphone",
+    price: 3999,
+    rating: 4.3,
+    image: Boat3,
+    description: "Over-ear headphones with active noise cancellation.",
+    details: "Over-Ear, ANC, 65hr Playback, Bluetooth 5.0, ASAP Charge",
+    stock: 7,
+    createdAt: new Date()
+  },
+  {
+    id: 16,
+    name: "boAt Bassheads 225",
+    brand: "boAt",
+    category: "headphone",
+    price: 599,
+    rating: 4.0,
+    image: Boat4,
+    description: "Wired earphones with super extra bass and metal finish.",
+    details: "In-Ear, 3.5mm Jack, Tangle-Free Cable, Mic, Bass Boost",
+    stock: 30,
+    createdAt: new Date()
+  }
+]
 
 const HeadphoneProductPage = () => {
-  const [headphones, setHeadphones] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading state
 
-  useEffect(() => {
-    const fetchHeadphones = async () => {
-      try {
-        const response = await axios.get('https://techshop-backend-cwww.onrender.com/headphones');
-        setHeadphones(response.data);
-      } catch (err) {
-        console.error("Error fetching headphones:", err);
-        toast.error("Failed to load headphone products.");
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchHeadphones();
-  }, []);
 
-  const brands = ['sony', 'oneplus', 'jbl', 'boat'];
+  const brands = [ 'oneplus', 'jbl', 'boat','sony'];
   const priceRanges = [
     { label: 'Under ₹5,000', min: 0, max: 4999 },
     { label: '₹5,000 - ₹10,000', min: 5000, max: 10000 },
@@ -140,16 +357,11 @@ const HeadphoneProductPage = () => {
             />
           </div>
 
-          {/* Loading State */}
-          {loading ? (
-            <div className="flex justify-center items-center h-64">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-            </div>
-          ) : (
+         
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {filteredHeadphones.length > 0 ? (
                 filteredHeadphones.map((product) => (
-                  <Link to={`/product/${product._id}`} key={product._id}>
+                
                     <div className="bg-white p-4 rounded-xl shadow-md flex flex-col items-center text-center">
                       <img
                         src={product.image}
@@ -174,7 +386,7 @@ const HeadphoneProductPage = () => {
                       <button
                         disabled={addedItems.includes(product.name)}
                         onClick={(e) => {
-                          e.preventDefault(); // Prevent link navigation when clicking button
+                          e.preventDefault(); 
                           addToCart(product);
                         }}
                         className={`mt-2 px-4 py-1 rounded text-white ${
@@ -186,7 +398,7 @@ const HeadphoneProductPage = () => {
                         {addedItems.includes(product.name) ? 'Added' : 'Add to Cart'}
                       </button>
                     </div>
-                  </Link>
+                  
                 ))
               ) : (
                 <p className="text-center col-span-full text-gray-500">
@@ -194,7 +406,7 @@ const HeadphoneProductPage = () => {
                 </p>
               )}
             </div>
-          )}
+          
         </section>
       </div>
 
