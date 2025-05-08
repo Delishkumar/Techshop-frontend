@@ -3,7 +3,7 @@ import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Signup from "./components/signub";
 import Login from "./components/login";
 import Home from "./components/home";
-
+import Upload from "./components/upload";
 import Product from './components/product'
 import Deals from "./components/Deals";
 import LaptopProductList from "./components/laptopos";
@@ -60,7 +60,11 @@ function App(){
       <Route path="/desktop" element={<DesktopProductList  />}></Route>
 
       <Route path="/product/:id" element={<ProductDetails />} />
+
      <Route path="profile" element={<Profile/>}></Route>
+
+     <Route path="upload" element={<Upload/>}></Route>
+
 
     </Routes>
     </BrowserRouter>
