@@ -62,7 +62,7 @@ const navigate = useNavigate()
       <p className="text-gray-700"><strong>Details:</strong> {product.details}</p>
       <p className="text-gray-700"><strong>Description:</strong> {product.description}</p>
       <p className={+product.stock > 0 ? 'text-green-500' : 'text-red-500'}>
-        {+product.instock > 0 ? `In Stock: ${product.stock}` : 'Out of Stock'}
+        {+product.stock > 0 ? `In Stock: ${product.stock}` : 'Out of Stock'}
       </p>
 
       {/* 💬 Reviews Section */}
